@@ -1,9 +1,13 @@
-;; start slime for common lisp
+;; enable slime for common lisp
 (setq inferior-lisp-program "clisp.exe")
 (load "C:\\common lisp\\quicklisp\\slime-helper.el")
 
-;; start company mode
-(global-company-mode 1)
+;; enable ido mode
+(require 'ido)
+(ido-mode t)
+
+;; enable company mode
+(global-company-mode t)
 
 ;; auto reload changed file
 (global-auto-revert-mode t)
