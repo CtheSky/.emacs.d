@@ -1,7 +1,3 @@
-;; enable slime for common lisp
-(setq inferior-lisp-program "clisp.exe")
-(load "C:\\common lisp\\quicklisp\\slime-helper.el")
-
 ;; enable ido mode
 (require 'ido)
 (ido-mode t)

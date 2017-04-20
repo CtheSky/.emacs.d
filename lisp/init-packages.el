@@ -22,6 +22,7 @@
 		;; --- Major Mode ---
 		js2-mode
 		markdown-mode
+		ein
 		;; --- Minor Mode ---
 		nodejs-repl
 		exec-path-from-shell
