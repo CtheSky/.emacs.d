@@ -26,6 +26,7 @@
 		;; --- Minor Mode ---
 		nodejs-repl
 		exec-path-from-shell
+		highlight-current-line
 		;; --- Themes ---
 		monokai-theme
 		solarized-theme
