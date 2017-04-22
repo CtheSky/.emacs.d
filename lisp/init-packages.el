@@ -27,6 +27,7 @@
 		nodejs-repl
 		exec-path-from-shell
 		highlight-current-line
+		nyan-mode
 		;; --- Themes ---
 		monokai-theme
 		solarized-theme
