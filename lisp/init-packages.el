@@ -14,6 +14,7 @@
 (defvar my/packages '(
 		;; --- Auto-completion ---
 		company
+		company-emacs-eclim
 		;; --- Better Editor ---
 		hungry-delete
 		swiper
@@ -23,11 +24,13 @@
 		js2-mode
 		markdown-mode
 		ein
+		eclim
 		;; --- Minor Mode ---
 		nodejs-repl
 		exec-path-from-shell
 		highlight-current-line
 		nyan-mode
+		gradle-mode
 		;; --- Themes ---
 		monokai-theme
 		solarized-theme
