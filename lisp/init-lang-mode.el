@@ -1,3 +1,4 @@
+
 ;; enable slime for common lisp
 (setq inferior-lisp-program "clisp.exe")
 (load "C:\\common lisp\\quicklisp\\slime-helper.el")
@@ -22,6 +23,10 @@
   (interactive)
   (gradle-run "build run"))
 (define-key gradle-mode-map (kbd "C-c C-r") 'build-and-run)
+
+;; set markdown parser command
+(custom-set-variables
+ '(markdown-command "pandoc"))
 
 ;;export
 (provide 'init-lang-mode)
