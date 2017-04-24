@@ -31,6 +31,7 @@
 		highlight-current-line
 		nyan-mode
 		gradle-mode
+		magit
 		;; --- Themes ---
 		monokai-theme
 		solarized-theme

@@ -1,3 +1,5 @@
+;; magit for git
+(global-set-key (kbd "C-x g") 'magit-status)
 
 ;; enable slime for common lisp
 (setq inferior-lisp-program "clisp.exe")
