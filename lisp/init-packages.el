@@ -25,6 +25,7 @@
 		markdown-mode
 		ein
 		eclim
+		impatient-mode
 		;; --- Minor Mode ---
 		nodejs-repl
 		exec-path-from-shell
