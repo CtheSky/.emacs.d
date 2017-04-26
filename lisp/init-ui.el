@@ -1,5 +1,5 @@
 ;; load theme
-(load-theme 'monokai t)
+(load-theme 'zenburn t)
 
 ;; nyan mode
 (nyan-mode t)

@@ -34,8 +34,7 @@
 		gradle-mode
 		magit
 		;; --- Themes ---
-		monokai-theme
-		solarized-theme
+		zenburn-theme
 		) "Default packages")
 
 (setq package-selected-packages my/packages)
