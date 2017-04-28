@@ -20,6 +20,7 @@
 		swiper
 		counsel
 		smartparens
+		ace-window
 		;; --- Major Mode ---
 		js2-mode
 		markdown-mode
