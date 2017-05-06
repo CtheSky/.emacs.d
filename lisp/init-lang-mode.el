@@ -11,6 +11,10 @@
 (require 'ein-notebook)
 (require 'ein-subpackages)
 
+;; fix python shell bug in emacs-25
+;; see: https://github.com/jorgenschaefer/elpy/issues/887
+(setq python-shell-completion-native-enable nil)
+
 ;; enable eclime for java eclipse IDE
 (require 'eclim)
 (add-hook 'java-mode-hook 'eclim-mode)
