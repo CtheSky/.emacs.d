@@ -13,7 +13,7 @@
 
 ;; enable slime for common lisp
 (setq inferior-lisp-program "clisp.exe")
-(load "C:\\common lisp\\quicklisp\\slime-helper.el")
+(setq slime-contribs '(slime-fancy))
 
 ;; enable ein for ipython notebook
 (require 'ein)

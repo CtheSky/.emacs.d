@@ -22,6 +22,7 @@
 		smartparens
 		ace-window
 		;; --- Major Mode ---
+		slime
 		js2-mode
 		markdown-mode
 		ein
