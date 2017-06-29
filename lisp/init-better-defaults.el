@@ -1,5 +1,5 @@
 ;; keybind for ace-window, faster window switching
-(global-set-key (kbd "M-p") 'ace-window)
+(global-set-key (kbd "<f4>") 'ace-window)
 (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
 
 ;; enable ido mode
