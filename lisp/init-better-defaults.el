@@ -24,12 +24,7 @@
 (scroll-bar-mode -1)
 
 ;; highlight current line
-(require 'highlight-current-line)
 (global-hl-line-mode t)
-(setq highlight-current-line-globally t)
-(setq highlight-current-line-high-faces nil)
-(setq highlight-current-line-whole-line nil)
-(setq hl-line-face (quote highlight))
 
 ;; set cursor type
 (setq cursor-type 'bar)

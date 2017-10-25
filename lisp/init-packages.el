@@ -31,7 +31,6 @@
 		;; --- Minor Mode ---
 		nodejs-repl
 		exec-path-from-shell
-		highlight-current-line
 		nyan-mode
 		gradle-mode
 		magit
