@@ -14,7 +14,6 @@
 (defvar my/packages '(
 		;; --- Auto-completion ---
 		company
-		company-emacs-eclim
 		;; --- Better Editor ---
 		hungry-delete
 		swiper
@@ -26,7 +25,6 @@
 		js2-mode
 		markdown-mode
 		ein
-		eclim
 		impatient-mode
 		;; --- Minor Mode ---
 		nodejs-repl

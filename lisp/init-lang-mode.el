@@ -25,13 +25,6 @@
 ;; see: https://github.com/jorgenschaefer/elpy/issues/887
 (setq python-shell-completion-native-enable nil)
 
-;; enable eclime for java eclipse IDE
-(require 'eclim)
-(add-hook 'java-mode-hook 'eclim-mode)
-(define-key eclim-mode-map (kbd "C-c C-c") 'eclim-problems-correct)
-(require 'company-emacs-eclim)
-(company-emacs-eclim-setup)
-
 ;; enable gradle for building java app
 (require 'gradle-mode)
 (add-hook 'java-mode-hook '(lambda() (gradle-mode 1)))
