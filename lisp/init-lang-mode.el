@@ -1,3 +1,6 @@
+;; c indentation 
+(setq-default c-basic-offset 4)
+
 ;; octave mode
 (setq auto-mode-alist
       (cons '("\\.m$" . octave-mode) auto-mode-alist))
