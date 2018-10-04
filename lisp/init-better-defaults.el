@@ -19,9 +19,12 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
-;; disable tool bar & scroll bar
+;; disable tool & menu & scroll bar
+(menu-bar-mode -1)
 (tool-bar-mode -1)
-(scroll-bar-mode -1)
+(if (display-graphic-p)
+    (progn
+      (scroll-bar-mode -1)))
 
 ;; highlight current line
 (global-hl-line-mode t)
