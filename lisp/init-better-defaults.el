@@ -12,8 +12,9 @@
 ;; auto reload changed file
 (global-auto-revert-mode t)
 
-;; display line number
+;; display line number by default, toggle with <f5>
 (global-linum-mode t)
+(global-set-key (kbd "<f5>") 'linum-mode)
 
 ;; disable backup file & auto save
 (setq make-backup-files nil)
