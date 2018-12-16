@@ -22,15 +22,12 @@
 		ace-window
 		;; --- Major Mode ---
 		slime
-		js2-mode
 		markdown-mode
 		ein
 		impatient-mode
 		;; --- Minor Mode ---
-		nodejs-repl
 		exec-path-from-shell
 		nyan-mode
-		gradle-mode
 		magit
 		;; --- Themes ---
 		zenburn-theme
