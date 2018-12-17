@@ -2,6 +2,10 @@
 (global-set-key (kbd "<f4>") 'ace-window)
 (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
 
+;; keybind for neotree
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
 ;; enable ido mode
 (require 'ido)
 (ido-mode t)
@@ -13,7 +17,7 @@
 (global-auto-revert-mode t)
 
 ;; display line number by default, toggle with <f5>
-(global-linum-mode t)
+(global-linum-mode 0)
 (global-set-key (kbd "<f5>") 'linum-mode)
 
 ;; disable backup file & auto save

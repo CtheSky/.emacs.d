@@ -20,6 +20,7 @@
 		counsel
 		smartparens
 		ace-window
+		neotree
 		;; --- Major Mode ---
 		slime
 		markdown-mode
