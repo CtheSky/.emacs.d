@@ -1,6 +1,9 @@
 ;; c indentation 
 (setq-default c-basic-offset 4)
 
+;; show paren for emacs-lisp-mode
+(add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
+
 ;; octave mode
 (setq auto-mode-alist
       (cons '("\\.m$" . octave-mode) auto-mode-alist))
@@ -27,14 +30,6 @@
 ;; fix python shell bug in emacs-25
 ;; see: https://github.com/jorgenschaefer/elpy/issues/887
 (setq python-shell-completion-native-enable nil)
-
-;; enable gradle for building java app
-(require 'gradle-mode)
-(add-hook 'java-mode-hook '(lambda() (gradle-mode 1)))
-(defun build-and-run ()
-  (interactive)
-  (gradle-run "build run"))
-(define-key gradle-mode-map (kbd "C-c C-r") 'build-and-run)
 
 ;; set markdown parser command
 (custom-set-variables

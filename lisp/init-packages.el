@@ -15,11 +15,9 @@
 		;; --- Auto-completion ---
 		company
 		;; --- Better Editor ---
-		hungry-delete
 		swiper
 		counsel
 		smartparens
-		ace-window
 		neotree
 		;; --- Major Mode ---
 		slime

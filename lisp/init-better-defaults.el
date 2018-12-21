@@ -1,7 +1,3 @@
-;; keybind for ace-window, faster window switching
-(global-set-key (kbd "<f4>") 'ace-window)
-(setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
-
 ;; keybind for neotree
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
@@ -16,8 +12,7 @@
 ;; auto reload changed file
 (global-auto-revert-mode t)
 
-;; display line number by default, toggle with <f5>
-(global-linum-mode 0)
+;; toggle line number mode toggle with <f5>
 (global-set-key (kbd "<f5>") 'linum-mode)
 
 ;; disable backup file & auto save
@@ -35,7 +30,7 @@
 (global-hl-line-mode t)
 
 ;; set cursor type
-(setq cursor-type 'bar)
+(setq-default cursor-type 'bar)
 
 ;; close introduction page
 (setq inhibit-splash-screen 1)
