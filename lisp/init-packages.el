@@ -15,10 +15,12 @@
 		;; --- Auto-completion ---
 		company
 		;; --- Better Editor ---
-		swiper
 		counsel
-		smartparens
 		neotree
+		ivy
+		smartparens
+		smex
+		swiper
 		;; --- Major Mode ---
 		slime
 		markdown-mode
