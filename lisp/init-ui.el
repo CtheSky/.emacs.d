@@ -2,7 +2,7 @@
 (load-theme 'zenburn t)
 
 ;; nyan mode
-(nyan-mode t)
+;;(nyan-mode t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

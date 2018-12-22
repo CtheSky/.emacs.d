@@ -28,7 +28,6 @@
 		impatient-mode
 		;; --- Minor Mode ---
 		exec-path-from-shell
-		nyan-mode
 		magit
 		;; --- Themes ---
 		zenburn-theme
