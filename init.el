@@ -1,8 +1,22 @@
+(setq inhibit-startup-message t)
+
+(require 'package)
+(setq package-enable-at-startup nil)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+
 (package-initialize)
 
-(add-to-list 'load-path "~/.emacs.d/lisp/")
+;; Bootstrap 'use-package'
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+(setq use-package-always-ensure t)
 
-(require 'init-packages)
+(use-package try)
+(use-package which-key :config (which-key-mode))
+
+(add-to-list 'load-path "~/.emacs.d/lisp/")
 (require 'init-ui)
 (require 'init-better-defaults)
 (require 'init-lang-mode)
+

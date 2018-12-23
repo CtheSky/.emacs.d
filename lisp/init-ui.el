@@ -1,8 +1,6 @@
 ;; load theme
-(load-theme 'zenburn t)
-
-;; nyan mode
-;;(nyan-mode t)
+(use-package zenburn-theme
+  :config (load-theme 'zenburn t))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

@@ -15,25 +15,12 @@
                 (font-lock-mode 1))))
 
 ;; magit for git
-(global-set-key (kbd "C-x g") 'magit-status)
+(use-package magit
+  :bind ("C-x g" . 'magit-status))
 
 ;; enable slime for common lisp
 (setq inferior-lisp-program "clisp.exe")
 (setq slime-contribs '(slime-fancy))
-
-;; enable ein for ipython notebook
-(require 'ein)
-(require 'ein-loaddefs)
-(require 'ein-notebook)
-(require 'ein-subpackages)
-
-;; fix python shell bug in emacs-25
-;; see: https://github.com/jorgenschaefer/elpy/issues/887
-(setq python-shell-completion-native-enable nil)
-
-;; set markdown parser command
-(custom-set-variables
- '(markdown-command "pandoc"))
 
 ;;export
 (provide 'init-lang-mode)
