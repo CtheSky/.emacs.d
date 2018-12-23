@@ -2,7 +2,8 @@
 
 (require 'package)
 (setq package-enable-at-startup nil)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives
+	     '("melpa" . "https://melpa.org/packages/"))
 
 (package-initialize)
 
@@ -20,3 +21,5 @@
 (require 'init-better-defaults)
 (require 'init-lang-mode)
 
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)

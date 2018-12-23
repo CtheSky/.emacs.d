@@ -2,6 +2,9 @@
 ;(use-package neotree
  ; :bind ("[f8]" . 'neotree-toggle))
 
+;; ace-window to switch between windows
+(use-package ace-window :init (global-set-key [remap other-window] 'ace-window))
+
 ;; used by counsel-M-x
 (use-package smex)
 
