@@ -1,5 +1,8 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
+(use-package try)
+(use-package which-key :config (which-key-mode))
+
 ;; ace-window to switch between windows
 (use-package ace-window :init (global-set-key [remap other-window] 'ace-window))
 
@@ -53,7 +56,7 @@
 ;; disable tool & menu & scroll bar
 (menu-bar-mode -1)
 (tool-bar-mode -1)
-p(if (display-graphic-p)
+(if (display-graphic-p)
     (progn
       (scroll-bar-mode -1)))
 
