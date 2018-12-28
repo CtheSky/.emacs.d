@@ -1,6 +1,4 @@
-;; keybind for neotree
-;(use-package neotree
- ; :bind ("[f8]" . 'neotree-toggle))
+(fset 'yes-or-no-p 'y-or-n-p)
 
 ;; ace-window to switch between windows
 (use-package ace-window :init (global-set-key [remap other-window] 'ace-window))
@@ -33,8 +31,14 @@
 	 ("<f6>" . 'ivy-resume))
 )
 
-;; enable company mode
-;; (global-company-mode t)
+;; projectile
+(use-package projectile
+  :config
+  (projectile-global-mode)
+  (setq projectile-completion-system 'ivy)
+  :bind
+  ("C-c p" . 'projectile-command-map)
+)
 
 ;; auto reload changed file
 (global-auto-revert-mode t)
@@ -49,7 +53,7 @@
 ;; disable tool & menu & scroll bar
 (menu-bar-mode -1)
 (tool-bar-mode -1)
-(if (display-graphic-p)
+p(if (display-graphic-p)
     (progn
       (scroll-bar-mode -1)))
 
