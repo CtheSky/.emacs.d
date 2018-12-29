@@ -11,7 +11,7 @@
 (setq use-package-always-ensure t)
 
 ;; load init files
-(add-to-list 'load-path "~/.emacs.d/init.d/")
+(add-to-list 'load-path "~/.emacs.d/lisp/")
 (require 'init-ui)
 (require 'init-better-defaults)
 (require 'init-lang-mode)
