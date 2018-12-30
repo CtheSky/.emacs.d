@@ -1,18 +1,28 @@
+;; company mode for completion
+(use-package company
+  :config
+  (global-company-mode t))
+
+(use-package company-quickhelp
+  :config
+  (company-quickhelp-mode 1))
+
+;; python
+(use-package anaconda-mode
+  :config
+  (add-hook 'python-mode-hook 'anaconda-mode)
+  (add-hook 'python-mode-hook 'anaconda-eldoc-mode))
+
+(use-package company-anaconda
+  :init (require 'rx)
+  :config
+  (add-to-list 'company-backends 'company-anaconda))
+
 ;; c indentation 
 (setq-default c-basic-offset 4)
 
 ;; show paren for emacs-lisp-mode
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
-
-;; octave mode
-(setq auto-mode-alist
-      (cons '("\\.m$" . octave-mode) auto-mode-alist))
-(add-hook 'octave-mode-hook
-          (lambda ()
-            (abbrev-mode 1)
-            (auto-fill-mode 1)
-            (if (eq window-system 'x)
-                (font-lock-mode 1))))
 
 ;; yaml mode
 (use-package yaml-mode
