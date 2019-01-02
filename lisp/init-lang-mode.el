@@ -38,5 +38,10 @@
 (setq inferior-lisp-program "clisp.exe")
 (setq slime-contribs '(slime-fancy))
 
+;; dictionary if on osx
+(use-package osx-dictionary
+  :if (eq system-type 'darwin)
+  :bind ("C-c d" . 'osx-dictionary-search-word-at-point))
+
 ;;export
 (provide 'init-lang-mode)
