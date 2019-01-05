@@ -39,13 +39,14 @@
   :config
   (projectile-global-mode)
   (setq projectile-completion-system 'ivy)
-  :bind
-  ("C-c p" . 'projectile-command-map)
-)
+  (setq projectile-switch-project-action 'projectile-find-file)
+  :bind (("C-c p" . 'projectile-command-map)
+	 ("s-p" . 'projectile-command-map))
+  )
+
 
 ;; treemacs
 (use-package treemacs
-  :ensure t
   :defer t
   :init
   (with-eval-after-load 'winum
@@ -134,6 +135,13 @@
 
 ;; set font size 
 (set-face-attribute 'default nil :height 160)
+
+;; TERMINAL MAPPINGS TO SUPPORT ITERM2 FOR MAC
+;; https://www.emacswiki.org/emacs/iTerm2
+(let ((map (if (boundp 'input-decode-map)
+               input-decode-map
+	     function-key-map)))
+  (define-key map "\e[1;P9"  (kbd "s-p")))
 
 ;; export 
 (provide 'init-better-defaults)
