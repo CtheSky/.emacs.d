@@ -43,5 +43,31 @@
   :if (eq system-type 'darwin)
   :bind ("C-c d" . 'osx-dictionary-search-word-at-point))
 
+;; markdown mode
+(use-package impatient-mode)
+(use-package markdown-mode
+  :init (setq markdown-command "pandoc")
+  :commands (markdown-mode gfm-mode)
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :bind (:map markdown-mode-command-map
+	 ("l" . markdown-live-preview-by-impatient-mode)))
+
+(defun markdown-live-preview-by-impatient-mode ()
+  (interactive)
+  (httpd-start)
+  (impatient-mode)
+  (imp-set-user-filter
+   (lambda (buffer)
+     (princ (with-current-buffer buffer
+	      (format "<!DOCTYPE html><html>\
+                         <title>Impatient Markdown</title>\
+                         <xmp theme=\"united\" style=\"display:none;\"> %s  </xmp>\
+                         <script src=\"http://strapdownjs.com/v/0.2/strapdown.js\"></script>\
+                       </html>" (buffer-substring-no-properties (point-min) (point-max))))
+	    (current-buffer))))
+  (browse-url (concat "http://localhost:8080/imp/live/" (buffer-name (current-buffer)))))
+
 ;;export
 (provide 'init-lang-mode)
