@@ -1,3 +1,32 @@
-/auto-save-list
-/elpa
-/tutorial
+# -*- mode: gitignore; -*-
+*~
+.\#*
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+
+# elpa packages
+elpa
+
+# eshell files
+eshell/history
+eshell/lastdir
+
+# projectile files
+projectile-bookmarks.eld
+projectile.cache
+
+# recentf
+recentf
+
+# smex mode
+smex-items
+
+# anaconda mode
+anaconda-mode
+
+# treemacs mode
+.cache
