@@ -1,3 +1,7 @@
+(use-package flycheck
+  :init
+  (global-flycheck-mode))
+
 ;; company mode for completion
 (use-package company
   :config
@@ -18,8 +22,24 @@
   :config
   (add-to-list 'company-backends 'company-anaconda))
 
-;; c indentation 
-(setq-default c-basic-offset 4)
+;; c
+(use-package irony
+  :config
+  (add-hook 'c++-mode-hook 'irony-mode)
+  (add-hook 'c-mode-hook 'irony-mode)
+  (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options))
+
+(use-package irony-eldoc
+  :config
+  (add-hook 'irony-mode-hook #'irony-eldoc))
+
+(use-package company-irony
+  :config
+  (add-to-list 'company-backends 'company-irony))
+
+;; (use-package flycheck-irony
+;;   :config
+;;   (add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
 
 ;; show paren for emacs-lisp-mode
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
@@ -33,6 +53,12 @@
 ;; magit for git
 (use-package magit
   :bind ("C-x g" . 'magit-status))
+
+;; org mode
+(use-package org
+  :bind (("C-c l" . 'org-insert-link)
+	 ("C-c a" . 'org-agenda)
+	 ("C-c c" . 'org-capture)))
 
 ;; enable slime for common lisp
 (setq inferior-lisp-program "clisp.exe")
