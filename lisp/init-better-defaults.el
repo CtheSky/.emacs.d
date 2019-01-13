@@ -3,6 +3,11 @@
 (use-package try)
 (use-package which-key :config (which-key-mode))
 
+;; fix exec path for mac
+(use-package exec-path-from-shell
+  :if (memq window-system '(mac ns x))
+  :config (exec-path-from-shell-initialize))
+
 ;; ace-window to switch between windows
 (use-package ace-window :init (global-set-key [remap other-window] 'ace-window))
 
@@ -133,7 +138,7 @@
 ;; close introduction page
 (setq inhibit-splash-screen 1)
 
-;; set font size 
+;; set font size
 (set-face-attribute 'default nil :height 160)
 
 ;; TERMINAL MAPPINGS TO SUPPORT ITERM2 FOR MAC
