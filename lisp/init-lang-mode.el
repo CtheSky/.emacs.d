@@ -22,6 +22,12 @@
   :config
   (add-to-list 'company-backends 'company-anaconda))
 
+(use-package pyvenv
+  :config
+  (setenv "WORKON_HOME" "~/miniconda3/envs")
+  (pyvenv-mode 1)
+  (pyvenv-tracking-mode 1))
+
 ;; c
 (use-package irony
   :config
