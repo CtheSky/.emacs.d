@@ -7,7 +7,10 @@
 (use-package shell
   :after company
   :config
-  (define-key shell-mode-map (kbd "TAB") #'company-manual-begin))
+  (define-key shell-mode-map (kbd "TAB") #'company-manual-begin)
+  :bind
+  (:map shell-mode-map
+        ("C-r". 'counsel-shell-history)))
 
 ;; fix exec path for mac
 (use-package exec-path-from-shell
