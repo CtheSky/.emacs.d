@@ -3,6 +3,12 @@
 (use-package try)
 (use-package which-key :config (which-key-mode))
 
+;; shell tab completion by company
+(use-package shell
+  :after company
+  :config
+  (define-key shell-mode-map (kbd "TAB") #'company-manual-begin))
+
 ;; fix exec path for mac
 (use-package exec-path-from-shell
   :if (memq window-system '(mac ns x))
@@ -148,5 +154,5 @@
 	     function-key-map)))
   (define-key map "\e[1;P9"  (kbd "s-p")))
 
-;; export 
+;; export
 (provide 'init-better-defaults)
