@@ -3,14 +3,19 @@
 (use-package try)
 (use-package which-key :config (which-key-mode))
 
-;; shell tab completion by company
+;; shell mode settings
 (use-package shell
   :after company
-  :config
-  (define-key shell-mode-map (kbd "TAB") #'company-manual-begin)
+  :hook (shell-mode . my/shell-mode-hook)
   :bind
   (:map shell-mode-map
-        ("C-r". 'counsel-shell-history)))
+        ("C-r" . 'counsel-shell-history)
+	("TAB" . 'company-manual-begin))
+  :config
+  (defun my/shell-mode-hook ()
+    (setq comint-input-ring-file-name "~/.zsh_history")
+    (setq comint-input-ring-separator "\n: \\([0-9]+\\):\\([0-9]+\\);")
+    (comint-read-input-ring t)))
 
 ;; fix exec path for mac
 (use-package exec-path-from-shell
