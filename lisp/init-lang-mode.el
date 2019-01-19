@@ -50,6 +50,9 @@
 ;; show paren for emacs-lisp-mode
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
+;; protobuf mode
+(use-package protobuf-mode)
+
 ;; yaml mode
 (use-package yaml-mode
   :config
