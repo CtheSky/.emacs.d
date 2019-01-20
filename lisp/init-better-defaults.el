@@ -36,6 +36,10 @@
   (setq ivy-format-function 'ivy-format-function-line)
   (setq ivy-use-virtual-buffers t)
   (setq enable-recursive-minibuffers t)
+  (set-face-attribute 'ivy-current-match nil
+		      :underline nil
+		      :background "#262626"
+		      :foreground nil)
   :bind (("C-s" . 'swiper)
 	 ("M-x" . 'counsel-M-x)
 	 ("C-s" . 'swiper)
@@ -142,9 +146,6 @@
 (tool-bar-mode -1)
 (if (display-graphic-p)
     (scroll-bar-mode -1))
-
-;; highlight current line
-(global-hl-line-mode t)
 
 ;; set cursor type
 (setq-default cursor-type 'bar)
