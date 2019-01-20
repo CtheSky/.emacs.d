@@ -61,7 +61,8 @@
 
 ;; magit for git
 (use-package magit
-  :bind ("C-x g" . 'magit-status))
+  :bind ("C-x g" . 'magit-status)
+  :config (setq magit-section-visibility-indicator nil))
 
 ;; org mode
 (use-package org
