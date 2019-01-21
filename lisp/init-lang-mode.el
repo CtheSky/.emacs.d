@@ -59,6 +59,11 @@
   (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
   (add-to-list 'auto-mode-alist '("\\.yaml\\'" . yaml-mode)))
 
+;; dockerfile mode
+(use-package dockerfile-mode
+  :config
+  (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode)))
+
 ;; magit for git
 (use-package magit
   :bind ("C-x g" . 'magit-status)
