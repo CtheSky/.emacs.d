@@ -150,6 +150,9 @@
 ;; set cursor type
 (setq-default cursor-type 'bar)
 
+;; add newlines when next line hit eof
+(setq next-line-add-newlines t)
+
 ;; close introduction page
 (setq inhibit-splash-screen 1)
 
