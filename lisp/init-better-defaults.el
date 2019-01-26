@@ -37,6 +37,7 @@
   (setq ivy-use-virtual-buffers t)
   (setq enable-recursive-minibuffers t)
   (set-face-attribute 'ivy-current-match nil
+		      :weight 'normal
 		      :underline nil
 		      :background "#262626"
 		      :foreground nil)
@@ -149,9 +150,6 @@
 
 ;; set cursor type
 (setq-default cursor-type 'bar)
-
-;; add newlines when next line hit eof
-(setq next-line-add-newlines t)
 
 ;; close introduction page
 (setq inhibit-splash-screen 1)
