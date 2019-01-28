@@ -17,6 +17,32 @@
     (setq comint-input-ring-separator "\n: \\([0-9]+\\):\\([0-9]+\\);")
     (comint-read-input-ring t)))
 
+;; term mode settings
+(use-package term
+  :after shell
+  :bind
+  (:map term-raw-map ("C-j" . 'toggle-between-term-and-shell-mode))
+  :config
+  (defun toggle-between-term-and-shell-mode ()
+    "switch term mode to be editable: https://www.emacswiki.org/emacs/ShellMode#toc12"
+    (interactive)
+    (if (equal major-mode 'term-mode)
+	(progn
+          (shell-mode)
+          (set-process-filter  (get-buffer-process (current-buffer)) 'comint-output-filter)
+          (local-set-key (kbd "C-j") 'toggle-between-term-and-shell-mode)
+          (compilation-shell-minor-mode 1)
+          (comint-send-input)
+	  )
+      (progn
+        (compilation-shell-minor-mode -1)
+        (font-lock-mode -1)
+        (set-process-filter  (get-buffer-process (current-buffer)) 'term-emulate-terminal)
+        (term-mode)
+        (term-char-mode)
+        (term-send-raw-string (kbd "C-l"))
+        ))))
+
 ;; fix exec path for mac
 (use-package exec-path-from-shell
   :if (memq window-system '(mac ns x))
