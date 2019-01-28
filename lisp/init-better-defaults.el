@@ -183,6 +183,12 @@
 ;; set font size
 (set-face-attribute 'default nil :height 140)
 
+;; keybind to resize window
+(global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "S-C-<down>") 'shrink-window)
+(global-set-key (kbd "S-C-<up>") 'enlarge-window)
+
 ;; TERMINAL MAPPINGS TO SUPPORT ITERM2 FOR MAC
 ;; https://www.emacswiki.org/emacs/iTerm2
 (let ((map (if (boundp 'input-decode-map)
