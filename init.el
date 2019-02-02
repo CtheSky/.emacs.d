@@ -6,27 +6,30 @@
 
 ;;; Code:
 
-;; Setup package management
-(require 'package)
-(setq package-enable-at-startup nil)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-(package-initialize)
+;;----------------------------------------------------------------------------
+;; Setup load path
+;;----------------------------------------------------------------------------
+(push (expand-file-name "lisp" user-emacs-directory) load-path)
+(push (expand-file-name "site-lisp" user-emacs-directory) load-path)
 
-;; Bootstrap 'use-package
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
-(setq use-package-always-ensure t)
+;;----------------------------------------------------------------------------
+;; Bootstrap config
+;;----------------------------------------------------------------------------
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(require 'init-package) ;; setup elpa & package management
 
-;; load init files
-(add-to-list 'load-path "~/.emacs.d/lisp/")
+;;----------------------------------------------------------------------------
+;; Preferences
+;;----------------------------------------------------------------------------
 (require 'init-ui)
 (require 'init-better-defaults)
 (require 'init-lang-mode)
 
-;; separate custom variables
-(setq custom-file "~/.emacs.d/custom.el")
-(load custom-file)
+;;----------------------------------------------------------------------------
+;; Variables configured via the interactive 'customize' interface
+;;----------------------------------------------------------------------------
+(when (file-exists-p custom-file)
+  (load custom-file))
 
 (provide 'init)
 ;; Local Variables:
