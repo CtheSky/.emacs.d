@@ -1,4 +1,11 @@
+;;; init-better-defaults.el --- Initialize various personal things -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 (fset 'yes-or-no-p 'y-or-n-p)
+
+(setenv "LANG" "en_US.UTF-8")
+(setenv "LC_ALL" "en_US.UTF-8")
+(setenv "LC_CTYPE" "en_US.UTF-8")
 
 (use-package try)
 (use-package which-key :config (which-key-mode))
@@ -198,3 +205,4 @@
 
 ;; export
 (provide 'init-better-defaults)
+;;; init-better-defaults ends here

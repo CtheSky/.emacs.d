@@ -1,3 +1,7 @@
+;;; init-ui.el --- Initialize ui configurations -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
+
 ;; load theme
 (use-package zenburn-theme
   :config
@@ -14,3 +18,4 @@
 
 ;; export
 (provide 'init-ui)
+;;; init-ui.el ends here

@@ -1,3 +1,11 @@
+;;; init.el --- Entry point of the whole configuration -*- lexical-binding: t -*-
+;;; Commentary:
+
+;; This file bootstraps the configuration, which is divided into
+;; a number of other files.
+
+;;; Code:
+
 ;; Setup package management
 (require 'package)
 (setq package-enable-at-startup nil)
@@ -19,3 +27,10 @@
 ;; separate custom variables
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
+
+(provide 'init)
+;; Local Variables:
+;; coding: utf-8
+;; no-byte-compile: t
+;; End:
+;;; init.el ends here

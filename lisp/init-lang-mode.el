@@ -1,3 +1,6 @@
+;;; init-lang-mode.el --- Initialize language related things -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 (use-package flycheck
   :init
   (global-flycheck-mode))
@@ -112,3 +115,4 @@
 
 ;;export
 (provide 'init-lang-mode)
+;;; init-lang-mode.el ends here
