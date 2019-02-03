@@ -17,6 +17,7 @@
 ;;----------------------------------------------------------------------------
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (require 'init-package) ;; setup elpa & package management
+(require 'init-benchmark-startup-time)
 
 ;;----------------------------------------------------------------------------
 ;; Preferences
