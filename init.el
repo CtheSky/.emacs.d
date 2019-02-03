@@ -25,6 +25,7 @@
 (require 'init-ui)
 (require 'init-better-defaults)
 (require 'init-lang-mode)
+(require 'init-dashboard)
 
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface
