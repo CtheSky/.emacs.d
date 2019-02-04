@@ -7,6 +7,12 @@
 ;;; Code:
 
 ;;----------------------------------------------------------------------------
+;; Setup user info
+;;----------------------------------------------------------------------------
+(setq user-full-name "Tianhong Chu")
+(setq user-mail-address "cthesky13@gmail.com")
+
+;;----------------------------------------------------------------------------
 ;; Setup load path
 ;;----------------------------------------------------------------------------
 (push (expand-file-name "lisp" user-emacs-directory) load-path)
@@ -23,9 +29,17 @@
 ;; Preferences
 ;;----------------------------------------------------------------------------
 (require 'init-ui)
+(require 'init-env-variables)
+(require 'init-projectile)
+(require 'init-treemacs)
+(require 'init-shell)
+(require 'init-term)
+(require 'init-ivy-counsel)
+(require 'init-window-control)
 (require 'init-better-defaults)
 (require 'init-lang-mode)
 (require 'init-dashboard)
+
 
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface
