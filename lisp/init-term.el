@@ -49,5 +49,8 @@
         (term-send-raw-string (kbd "C-l"))
         ))))
 
+(use-package eterm-256color
+  :hook (term-mode . eterm-256color-mode))
+
 (provide 'init-term)
 ;;; init-term.el ends here
