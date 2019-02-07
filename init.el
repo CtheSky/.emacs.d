@@ -29,17 +29,27 @@
 ;; Preferences
 ;;----------------------------------------------------------------------------
 (require 'init-ui)
+(require 'init-utils)
+(require 'init-key-map)
 (require 'init-env-variables)
 (require 'init-projectile)
 (require 'init-treemacs)
 (require 'init-shell)
 (require 'init-term)
+(require 'init-magit)
 (require 'init-ivy-counsel)
 (require 'init-window-control)
 (require 'init-better-defaults)
-(require 'init-lang-mode)
+(require 'init-flycheck)
+(require 'init-company)
 (require 'init-dashboard)
-
+(require 'init-org)
+(require 'init-python)
+(require 'init-c)
+(require 'init-protobuf)
+(require 'init-yaml)
+(require 'init-markdown)
+(require 'init-osx-dictionary)
 
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface
