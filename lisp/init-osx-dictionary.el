@@ -26,7 +26,13 @@
 
 (use-package osx-dictionary
   :if (eq system-type 'darwin)
-  :bind ("C-c d" . 'osx-dictionary-search-word-at-point))
+  :bind ("C-c d" . 'search-in-other-window)
+  :config
+  (defun search-in-other-window ()
+    (interactive)
+    (osx-dictionary-search-word-at-point)
+    (other-window -1)))
+
 
 (provide 'init-osx-dictionary)
 ;;; init-osx-dictionary.el ends here
