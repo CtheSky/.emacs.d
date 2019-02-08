@@ -18,10 +18,18 @@
      'zenburn
      `(default ((t (:foreground ,zenburn-fg :background "#3a3a3a")))))))
 
-;; mod line
-(use-package powerline
+;; to display winum in mode line
+(use-package winum
   :config
-  (powerline-default-theme))
+  (setq winum-auto-setup-mode-line nil)
+  (winum-mode))
+
+;; mode line config
+(use-package spaceline
+  :init (which-function-mode 1)
+  :config
+  (require 'spaceline-config)
+  (spaceline-spacemacs-theme))
 
 ;; disable tool & menu & scroll bar
 (menu-bar-mode -1)
