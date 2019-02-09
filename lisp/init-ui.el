@@ -29,6 +29,7 @@
   :init (which-function-mode 1)
   :config
   (require 'spaceline-config)
+  (setq powerline-default-separator 'utf-8) ;; fix separator in terminal: https://github.com/TheBB/spaceline/issues/145
   (spaceline-spacemacs-theme))
 
 ;; disable tool & menu & scroll bar
