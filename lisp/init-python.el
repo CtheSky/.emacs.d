@@ -24,6 +24,11 @@
 
 ;;; Code:
 
+(use-package gud
+  :defer t
+  :config
+  (setq gud-pdb-command-name "python -m pdb"))
+
 (use-package anaconda-mode
   :diminish anaconda-mode
   :config
