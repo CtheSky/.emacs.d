@@ -29,6 +29,7 @@
   (projectile-global-mode)
   (setq projectile-completion-system 'ivy)
   (setq projectile-switch-project-action 'projectile-find-file)
+  (setq projectile-mode-line-function '(lambda () (format " Proj[%s]" (projectile-project-name))))
   :bind (("C-c p" . 'projectile-command-map)
 	 ("s-p" . 'projectile-command-map))
   )

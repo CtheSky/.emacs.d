@@ -25,6 +25,7 @@
 ;;; Code:
 
 (use-package flycheck
+  :diminish flycheck-mode
   :init (global-flycheck-mode))
 
 (provide 'init-flycheck)

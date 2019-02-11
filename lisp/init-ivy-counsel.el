@@ -30,6 +30,7 @@
 
 ;; ivy & swiper & counsel
 (use-package counsel
+  :diminish ivy-mode
   :config
   (ivy-mode 1)
   (setq ivy-count-format "(%d/%d) ")

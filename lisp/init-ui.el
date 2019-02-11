@@ -24,6 +24,9 @@
   (setq winum-auto-setup-mode-line nil)
   (winum-mode))
 
+;; extra diminish settings
+(use-package eldoc :diminish eldoc-mode)
+
 ;; mode line config
 (use-package spaceline
   :init (which-function-mode 1)

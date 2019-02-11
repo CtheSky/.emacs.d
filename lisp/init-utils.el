@@ -25,7 +25,9 @@
 ;;; Code:
 
 (use-package try)
-(use-package which-key :config (which-key-mode))
+(use-package which-key
+  :diminish which-key-mode
+  :config (which-key-mode))
 
 (provide 'init-utils)
 ;;; init-utils.el ends here

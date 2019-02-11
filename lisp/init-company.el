@@ -26,6 +26,7 @@
 
 ;; company mode for completion
 (use-package company
+  :diminish company-mode
   :config
   (global-company-mode t)
   (setq company-idle-delay 0.3)
