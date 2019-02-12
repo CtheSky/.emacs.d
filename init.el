@@ -46,6 +46,7 @@
 (require 'init-org)
 (require 'init-python)
 (require 'init-c)
+(require 'init-lua)
 (require 'init-protobuf)
 (require 'init-yaml)
 (require 'init-markdown)
